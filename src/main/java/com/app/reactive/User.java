@@ -1,8 +1,9 @@
 package com.app.reactive;
 
-import java.util.concurrent.Flow;
+import org.reactivestreams.Subscriber;
+import org.reactivestreams.Subscription;
 
-public class User implements Flow.Subscriber<String> {
+public class User implements Subscriber<String> {
 
     private String name;
 
@@ -11,7 +12,7 @@ public class User implements Flow.Subscriber<String> {
     }
 
     @Override
-    public void onSubscribe(Flow.Subscription subscription) {
+    public void onSubscribe(Subscription subscription) {
         System.out.println("onSubscribe("+name+")");
         subscription.request(Long.MAX_VALUE);
     }
