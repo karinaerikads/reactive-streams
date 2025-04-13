@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group = 'com.app.createUrlShortner'
+group = 'com.app.reactive'
 version = '1.0-SNAPSHOT'
 
 repositories {
@@ -12,7 +12,7 @@ repositories {
 dependencies {
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
-    implementation('org.reactivestreams:reactive-streams:1.0.4')
+    implementation 'org.reactivestreams:reactive-streams:1.0.4'
 }
 
 test {
