@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.app.createUrlShortner'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation('org.reactivestreams:reactive-streams:1.0.4')
+}
+
+test {
+    useJUnitPlatform()
+}
